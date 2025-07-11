@@ -1,0 +1,318 @@
+/* Header Section Setup */
+.header-section {
+  position: relative;
+  background-color: #1e1b19;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar.navbar-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-solid {
+  background-color: #1e1b19 !important;
+}
+.navbar.scrolled {
+  background-color: #1c1a1a !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img.logo-img {
+  height: 45px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: rgb(200, 189, 123);
+}
+
+/* Navbar Links */
+.navbar-nav {
+  gap: 1.5rem;
+}
+
+.navbar-nav .nav-link,
+.dropdown-item {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.dropdown-item:hover {
+  color: rgb(200, 189, 123) !important;
+}
+
+.dropdown-menu {
+  background-color: #1c1a1a;
+  border: none;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+}
+
+/* Right Navbar Icons */
+.icon-links {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 1.1rem !important;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.nav-icon:hover {
+  transform: scale(1.2);
+  color: rgb(200, 189, 123);
+}
+
+
+
+/* Cart Modal (Right Side Slide) */
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #1e1b19;
+  color: rgb(200, 189, 123);
+  z-index: 1050;
+  padding: 2rem;
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 0.4s ease forwards;
+  overflow-y: auto;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cart-content {
+  position: relative;
+}
+
+.cart-item {
+  border-bottom: 1px solid rgba(200, 189, 123, 0.2);
+  padding-bottom: 1rem;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.qty-btn {
+  background: transparent;
+  border: 1px solid rgb(200, 189, 123);
+  color: rgb(200, 189, 123);
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: rgb(200, 189, 123);
+  color: black;
+}
+
+/* Search Modal (Top Drop) */
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e1b19;
+  color: rgb(200, 189, 123);
+  z-index: 1050;
+  padding: 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  animation: dropDown 0.4s ease forwards;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.search-content {
+  max-width: 100%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  background: none;
+  color: rgb(200, 189, 123);
+  border: none;
+  cursor: pointer;
+}
+
+.search-content input {
+  background-color: transparent;
+  border: 1px solid rgb(200, 189, 123);
+  color: rgb(200, 189, 123);
+}
+
+.search-content input::placeholder {
+  color: rgb(200, 189, 123);
+}
+
+.search-content .btn {
+  border-color: rgb(200, 189, 123);
+  color: rgb(200, 189, 123);
+}
+
+.search-content .btn:hover {
+  background-color: rgb(200, 189, 123);
+  color: black;
+}
+
+/* ============================
+   ✅ Responsive Enhancements
+=============================== */
+@media (max-width: 992px) {
+  .carousel-caption {
+    top: 20%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p.lead {
+    font-size: 1rem;
+  }
+
+  .icon-links {
+    gap: 0.7rem;
+  }
+
+  .nav-icon {
+    font-size: 1rem !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 15%;
+    left: 5%;
+  }
+
+  .cart-modal {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-modal {
+    padding: 1rem;
+  }
+
+  .search-content input,
+  .search-content .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 10%;
+    left: 5%;
+    max-width: 95%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .cart-item-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .qty-btn {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

@@ -1,0 +1,83 @@
+.featured-collections {
+  width: 100%;
+  background-color: #1e1b19;
+  color: rgb(200, 189, 123);
+  font-family: 'Playfair Display', serif;
+}
+
+.collections-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.collections-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  width: 65%;
+  height: 100%;
+}
+
+.collection-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  transition: filter 0.3s ease;
+}
+
+.collections-left {
+  width: 35%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  transition: filter 0.3s ease;
+}
+
+.collection-content {
+  color: rgb(200, 189, 123);
+  max-width: 80%;
+}
+
+.collection-content p {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.collection-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-collection {
+  background-color: #c8bd7b;
+  border: none;
+  color: black;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-collection:hover {
+  background-color: #e0d28a;
+  color: black;
+}
+
+/* Brighten images on hover */
+.collection-item:hover,
+.collections-left:hover {
+  filter: brightness(1.15);
+}

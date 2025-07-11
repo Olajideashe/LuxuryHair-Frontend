@@ -1,0 +1,215 @@
+.new-arrivals-section {
+  background-color: #1e1b19;
+  padding: 4rem 2rem;
+  color: rgb(200, 189, 123);
+  font-family: "Libre Baskerville", serif;
+}
+
+.new-arrivals-section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(200, 189, 123);
+}
+
+.new-arrivals-section .section-subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.new-arrivals-section .product-card {
+  padding: 1rem;
+  text-align: center;
+}
+
+.new-arrivals-section .product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.new-arrivals-section .product-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.new-arrivals-section .product-image-wrapper:hover .product-img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.new-arrivals-section .product-hover-actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  gap: 8px;
+}
+
+.new-arrivals-section .product-image-wrapper:hover .product-hover-actions {
+  opacity: 1;
+}
+
+.new-arrivals-section .product-hover-actions svg {
+  background: rgba(30, 27, 25, 0.8);
+  padding: 6px;
+  border-radius: 50%;
+  color: rgb(200, 189, 123);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.new-arrivals-section .product-hover-actions svg:hover {
+  transform: scale(1.1);
+  background: rgb(200, 189, 123);
+  color: black;
+}
+
+.new-arrivals-section .product-details {
+  margin-top: 0.8rem;
+}
+
+.new-arrivals-section .product-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.new-arrivals-section .product-price {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Quick View Modal */
+.quickview-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.quickview-modal {
+  background: #1e1b19;
+  color: rgb(200, 189, 123);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.quickview-modal img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.quickview-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quickview-info .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid rgb(200, 189, 123);
+  background: transparent;
+  color: rgb(200, 189, 123);
+  cursor: pointer;
+}
+
+.quantity-controls button:hover {
+  background: rgb(200, 189, 123);
+  color: black;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-add,
+.btn-wishlist {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.btn-add {
+  background-color: rgb(200, 189, 123);
+  color: black;
+}
+
+.btn-add:hover {
+  background-color: #e0d28a;
+}
+
+.btn-wishlist {
+  background: transparent;
+  border: 1px solid rgb(200, 189, 123);
+  color: rgb(200, 189, 123);
+}
+
+.btn-wishlist:hover {
+  background: rgb(200, 189, 123);
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgb(200, 189, 123);
+  font-size: 1.5rem;
+  cursor: pointer;
+}

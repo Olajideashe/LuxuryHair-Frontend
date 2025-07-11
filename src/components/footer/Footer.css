@@ -1,0 +1,154 @@
+.luxury-footer {
+  background-color: #1b1b1b;
+  color: rgb(200, 189, 123);
+  font-family: "Libre Baskerville", serif;
+  padding-top: 3rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.footer-brandd {
+  flex: 1;
+  min-width: 250px;
+}
+
+.brandd-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+}
+.brandd-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: rgb(200, 189, 123) !important; /* force gold color */
+  transition: none !important;         /* remove transition effects */
+}
+
+
+.footer-brandd p {
+  font-size: 0.6rem;
+  color: #c8bd7b;
+}
+
+.share-text {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-links h6 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #c8bd7b;
+  font-size: 0.6rem;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-contact h6 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  color: #c8bd7b;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact svg {
+  margin-right: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  display: flex;
+  gap: 25rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #1b1b1b;
+  border-top: 1px solid #333;
+}
+
+.categories {
+  margin-bottom: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #c8bd7b;
+  font-size: 0.6rem;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.payment-icons img {
+  height: 32px;
+  width: auto;
+}
+
+.footer-note {
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}

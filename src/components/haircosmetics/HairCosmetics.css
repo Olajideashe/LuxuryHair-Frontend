@@ -1,0 +1,28 @@
+.icon-hover {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.1);
+}
+
+.playfair-font {
+  font-family: "Libre Baskerville", serif !important;
+    background-color: #31251f;
+    /* updated from screenshot */
+
+    color: rgb(200, 189, 123) !important;
+}
+
+.playfair-font h2,
+.playfair-font h5,
+.playfair-font p {
+    color: rgb(200, 189, 123) !important;
+}
+
+.playfair-font h2 {
+    font-size: 2.5rem !important;
+}

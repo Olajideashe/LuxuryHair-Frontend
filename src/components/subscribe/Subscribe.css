@@ -1,0 +1,60 @@
+.subscribe-section {
+  background-color: #1e1b19;
+  color: rgb(200, 189, 123);
+  padding: 4rem 2rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.subscribe-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subscribe-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribe-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(200, 189, 123);
+  background: transparent;
+  color: rgb(200, 189, 123);
+  border-radius: 25px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.subscribe-input::placeholder {
+  color: rgb(200, 189, 123);
+}
+
+.subscribe-btn {
+  background-color: rgb(200, 189, 123);
+  color: black;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #e0d28a;
+}
+
+.subscribe-success {
+  margin-top: 1rem;
+  color: #8f8;
+  font-size: 0.95rem;
+}
