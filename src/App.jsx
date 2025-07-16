@@ -8,6 +8,8 @@ import Haircare from "./pages/haircare/Haircare";
 import Contact from "./pages/contact/Contact";
 import SearchResults from "./pages/search/SearchResults";
 import CollectionDetail from "./pages/collection/CollectionDetail";
+import Login from "./pages/account/Login";
+import Register from "./pages/account/Register";
 
 function App() {
   return (
@@ -58,7 +60,23 @@ function App() {
           </Layout>
         }
       />
+      <Route
+        path="/login"
+        element={
+          <Layout>
+            <Login />
+          </Layout>
+        }
+      />
 
+      <Route
+        path="/register"
+        element={
+          <Layout>
+            <Register />
+          </Layout>
+        }
+      />
       <Route
         path="/search-results"
         element={

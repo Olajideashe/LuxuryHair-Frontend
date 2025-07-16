@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { BsHeartFill, BsHeart } from "react-icons/bs";
 import "./CollectionDetail.css";
+import QuickViewModal from "../../components/QuickViewModal/QuickViewModal";
+
 
 // Dummy product data
 const dummyProducts = [

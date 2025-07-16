@@ -17,9 +17,11 @@ const collections = [
 const Collection = () => {
   return (
     <section className="collection-page">
-      <div className="collection-header">
-        <h2>COLLECTIONS</h2>
-        <p>Home / Collections</p>
+    <div className="login-hero">
+        <div className="login-hero-overlay">
+          <h2>COLLECTIONS</h2>
+          <p>Home / Collections</p>
+        </div>
       </div>
 
       <div className="collection-grid container">

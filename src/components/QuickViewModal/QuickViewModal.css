@@ -1,0 +1,151 @@
+.quickview-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.quickview-modal {
+    background: #262323;
+    color: #c8bd7b;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.quickview-modal-overlay .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.quickview-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+.quickview-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.quickview-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quickview-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.quickview-price {
+    font-size: 1.2rem;
+    color: #a67c00;
+}
+
+.quickview-modal-overlay .length-options,
+.quickview-modal-overlay .color-options,
+.quickview-modal-overlay .quantity-controls {
+    margin-top: 0.5rem;
+}
+
+.quickview-modal-overlay .length-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+}
+
+.quickview-modal-overlay .length-buttons button {
+    padding: 0.2rem 0.2rem;
+    border: 0.5px solid #a67c00;
+    background-color: transparent;
+    color: #a67c00;
+
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.quickview-modal-overlay .length-buttons button.active {
+    background: #f5f5f5;
+    color: #a67c00;
+    border: 1px solid #a67c00;
+}
+
+.quickview-modal-overlay .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.quickview-modal-overlay .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quickview-modal-overlay .quantity-controls span {
+    min-width: 25px;
+    text-align: center;
+}
+
+.quickview-modal-overlay .modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.quickview-modal-overlay .btn-add,
+.quickview-modal-overlay .btn-wishlist {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.quickview-modal-overlay .btn-add {
+    background-color: transparent;
+    color: #a67c00;
+    border: 1px solid #a67c00;
+}
+
+.quickview-modal-overlay .btn-add:hover {
+    background-color: #000;
+}
+
+.quickview-modal-overlay .btn-wishlist {
+    background-color: transparent;
+    color: #a67c00;
+    border: 1px solid #a67c00;
+}
+
+.quickview-modal-overlay .btn-wishlist:hover {
+    background-color: #a67c00;
+    color: white;
+}

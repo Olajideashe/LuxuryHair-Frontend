@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Shop.css";
-import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { BsHeart, BsHeartFill, BsEye } from "react-icons/bs";
+import QuickViewModal from "../../components/QuickViewModal/QuickViewModal";
+
 
 // Dummy data
 const allProducts = [
@@ -93,12 +95,40 @@ const Shop = () => {
     currentPage * perPage
   );
 
+  // quick view modal state
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedLength, setSelectedLength] = useState(null);
+
+
+  const handleAddToWishlist = (product) => {
+    // You can integrate backend/global logic later
+    console.log("Added to wishlist:", product);
+  };
+
+  const handleAddToCart = () => {
+    console.log("Add to cart:", {
+      ...quickViewProduct,
+      quantity,
+      selectedLength,
+    });
+    setQuickViewProduct(null);
+  };
+
+
+
   return (
-    <div className="collection-detail-page">
+    <div className="shop-page">
+      <div className="login-hero">
+        <div className="login-hero-overlay">
+          <h2>PRODUCTS</h2>
+          <p>Home / Products</p>
+        </div>
+      </div>
       <div className="container d-flex">
         {/* Sidebar */}
-        <aside className="filter-sidebar">
-          <h5 className="filter-sidebar-heading">Category</h5>
+        <aside className="shop-sidebar">
+          <h5 className="shop-sidebar-heading">Category</h5>
           <ul>
             {categories.map((cat) => (
               <li key={cat}>
@@ -109,18 +139,18 @@ const Shop = () => {
             ))}
           </ul>
 
-          <h5 className="filter-sidebar-heading">Shop By Price</h5>
-          <div className="price-filters">
+          <h5 className="shop-sidebar-heading">Shop By Price</h5>
+          <div className="shop-price-filters">
             <button onClick={() => setSelectedPrice([100, 200])}>₦100 - ₦200</button>
             <button onClick={() => setSelectedPrice([200, 300])}>₦200 - ₦300</button>
             <button onClick={() => setSelectedPrice([300, 500])}>₦300 - ₦500</button>
+            <button onClick={resetFilters} >Reset Filters</button>
           </div>
-          <button onClick={resetFilters} className="reset-btn">Reset Filters</button>
         </aside>
 
         {/* Main Content */}
         <main className="product-grid-section">
-          <h2 className="collection-title">Shop All Products</h2>
+          <h2 className="shop-title">Shop All Products</h2>
 
           <div className="toolbar">
             <input
@@ -145,12 +175,19 @@ const Shop = () => {
                   <img src={product.image} alt={product.title} />
                   <p>{product.title}</p>
                   <span>₦{product.price.toLocaleString()}</span>
-                  <button
-                    className="wishlist-icon"
-                    onClick={() => toggleWishlist(product.id)}
-                  >
-                    {wishlist.includes(product.id) ? <BsHeartFill color="red" /> : <BsHeart />}
-                  </button>
+                  <div className="icon-actions">
+                    <span onClick={() => toggleWishlist(product.id)}>
+                      {wishlist.includes(product.id) ? <BsHeartFill color="red" /> : <BsHeart />}
+                    </span>
+                    <span onClick={() => {
+                      setQuickViewProduct(product);
+                      setQuantity(1);
+                      setSelectedLength(null);
+                    }}>
+                      <BsEye title="Quick View" />
+                    </span>
+                  </div>
+
                 </div>
               ))
             )}
@@ -174,6 +211,17 @@ const Shop = () => {
           </div>
         </main>
       </div>
+      <QuickViewModal
+        product={quickViewProduct}
+        onClose={() => setQuickViewProduct(null)}
+        quantity={quantity}
+        setQuantity={setQuantity}
+        selectedLength={selectedLength}
+        setSelectedLength={setSelectedLength}
+        handleAddToCart={handleAddToCart}
+        handleAddToWishlist={handleAddToWishlist}
+      />
+
     </div>
   );
 };

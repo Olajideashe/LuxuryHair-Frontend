@@ -1,0 +1,104 @@
+.register-page {
+  background-color: #1d1b1b;
+  color: #fff;
+  min-height: 50vh;
+  padding: 5rem 0rem 2rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Hero Section */
+.register-hero {
+  position: relative;
+  height: 250px;
+  background-image: url('/images/register-banner.jpg'); /* Replace as needed */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-hero-overlay {
+  text-align: center;
+  color: #d2b48c;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  width: 100%;
+}
+
+.register-hero-overlay h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.register-hero-overlay p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* Form Styling */
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  background-color: #111;
+  padding: 40px;
+  border-radius: 10px;
+  width: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #2c2a2a;
+  color: #fff;
+  font-size: 15px;
+}
+
+.register-form input::placeholder {
+  color: #bbb;
+}
+
+.register-form button {
+  width: 100%;
+  background-color: #bfa166;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #d2b48c;
+}
+
+/* Links */
+.register-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  font-size: 14px;
+}
+
+.register-links a {
+  color: #d2b48c;
+  text-decoration: none;
+}
+
+.register-links a:hover {
+  text-decoration: underline;
+}
