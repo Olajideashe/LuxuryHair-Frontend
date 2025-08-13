@@ -1,0 +1,104 @@
+.about-page {
+  background-color: #1d1b1b;
+  color: #d2b48c;
+  font-family: 'Libre Baskerville', serif;
+  padding: 5rem 0rem 2rem;
+}
+
+.about-page .about-hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.about-page .about-hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #d2b48c;
+}
+
+.about-page .about-hero p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.about-page .container {
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+  background-color: #151311;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-section h3 {
+  color: #bfa166;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-section p,
+.about-section ul {
+  color: #e0d9c6;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.about-page .ceo-section {
+  margin-top: 3rem;
+}
+.ceo-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ceo-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #bfa166;
+}
+
+.ceo-info {
+  flex: 1;
+}
+
+.ceo-info h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #d2b48c;
+}
+
+.ceo-social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ceo-social-icons a {
+  color: #d2b48c;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.ceo-social-icons a:hover {
+  color: #fff;
+}
+
+.ceo-info p {
+  color: #e0d9c6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

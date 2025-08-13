@@ -145,17 +145,20 @@
 
 .collection-detail-page .wishlist-icon {
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 10px;
   background: none;
   color: #c8bd7b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-size: 1rem;
   cursor: pointer;
   z-index: 2;
 }
 
 .collection-detail-page .wishlist-icon:hover {
-  color: red;
+  transform: scale(1.2);
 }
 
 /* PAGINATION */

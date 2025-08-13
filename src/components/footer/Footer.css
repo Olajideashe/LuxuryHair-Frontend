@@ -55,6 +55,17 @@
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
+.social-icons a {
+  color: #d2b48c;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
 
 .footer-links {
   flex: 1;

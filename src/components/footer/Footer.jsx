@@ -26,10 +26,17 @@ const Footer = () => {
           <p>Glamour starts with great Hair.</p>
           <p className="share-text">Share with us</p>
           <div className="social-icons">
-            <BsFacebook />
-            <BsInstagram />
-            <BsWhatsapp />
+            <a href="https://www.facebook.com/share/1AfLX9QDjW/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <BsFacebook />
+            </a>
+            <a href="https://www.instagram.com/ire_hairmpire?igsh=MWt0M3pqYnI2MGRhbg==" target="_blank" rel="noopener noreferrer">
+              <BsInstagram />
+            </a>
+            <a href="https://wa.me/2348067288807" target="_blank" rel="noopener noreferrer">
+              <BsWhatsapp />
+            </a>
           </div>
+
         </div>
 
         <div className="footer-links">

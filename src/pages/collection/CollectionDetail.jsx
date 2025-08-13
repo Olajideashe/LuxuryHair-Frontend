@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { BsHeartFill, BsHeart } from "react-icons/bs";
+import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
+import { BsHeartFill, BsHeart, BsEye } from "react-icons/bs";
 import "./CollectionDetail.css";
 import QuickViewModal from "../../components/QuickViewModal/QuickViewModal";
 
@@ -73,6 +73,27 @@ const CollectionDetail = () => {
     );
   };
 
+  // quick view modal state
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedLength, setSelectedLength] = useState(null);
+
+
+  const handleAddToWishlist = (product) => {
+    // You can integrate backend/global logic later
+    console.log("Added to wishlist:", product);
+  };
+
+  const handleAddToCart = () => {
+    console.log("Add to cart:", {
+      ...quickViewProduct,
+      quantity,
+      selectedLength,
+    });
+    setQuickViewProduct(null);
+  };
+
+
   return (
     <div className="collection-detail-page">
       <div className="container d-flex">
@@ -125,8 +146,17 @@ const CollectionDetail = () => {
           <div className="product-grid">
             {paginated.map((product) => (
               <div className="product-card" key={product.id}>
-                <div className="wishlist-icon" onClick={() => toggleWishlist(product.id)}>
-                  {wishlist.includes(product.id) ? <BsHeartFill color="#c8bd7b" /> : <BsHeart />}
+                <div className="wishlist-icon">
+                  <span onClick={() => toggleWishlist(product.id)}>
+                    {wishlist.includes(product.id) ? <BsHeartFill color="red" /> : <BsHeart />}
+                  </span>
+                  <span onClick={() => {
+                    setQuickViewProduct(product);
+                    setQuantity(1);
+                    setSelectedLength(null);
+                  }}>
+                    <BsEye title="Quick View" />
+                  </span>
                 </div>
                 <img src={product.image} alt={product.title} />
                 <p>{product.title}</p>
@@ -143,6 +173,16 @@ const CollectionDetail = () => {
           </div>
         </main>
       </div>
+      <QuickViewModal
+        product={quickViewProduct}
+        onClose={() => setQuickViewProduct(null)}
+        quantity={quantity}
+        setQuantity={setQuantity}
+        selectedLength={selectedLength}
+        setSelectedLength={setSelectedLength}
+        handleAddToCart={handleAddToCart}
+        handleAddToWishlist={handleAddToWishlist}
+      />
     </div>
   );
 };

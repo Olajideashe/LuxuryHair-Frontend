@@ -1,151 +1,203 @@
-.quickview-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.quickview-modal-wrapper .quickview-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.quickview-modal {
-    background: #262323;
-    color: #c8bd7b;
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 800px;
-    width: 100%;
-    position: relative;
+.quickview-modal-wrapper .quickview-modal {
+  background-color: #1e1b1a;
+  color: #c8bd7b;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  font-family: 'Libre Baskerville', serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.quickview-modal-overlay .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+.quickview-modal-wrapper .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #c8bd7b;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-.quickview-content {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-}
-.quickview-img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 6px;
+.quickview-modal-wrapper .quickview-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+
 }
 
-.quickview-info {
-    flex: 1;
-    display: flex;
+.quickview-modal-wrapper .quickview-img {
+  flex: 1 1 300px;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.quickview-modal-wrapper .quickview-info {
+  flex: 2 1 400px;
+}
+
+.quickview-modal-wrapper .quickview-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #f2e7c9;
+}
+
+.quickview-modal-wrapper .quickview-description-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #f2e7c9;
+}
+
+.quickview-modal-wrapper .quickview-price {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #bfa76f;
+}
+
+.quickview-modal-wrapper .length-options,
+.quickview-modal-wrapper .color-options,
+.quickview-modal-wrapper .size-options,
+.quickview-modal-wrapper .quantity-controls {
+  margin-bottom: 1.5rem;
+}
+
+.quickview-modal-wrapper .length-options strong,
+.quickview-modal-wrapper .color-options strong,
+.quickview-modal-wrapper .size-options strong,
+.quickview-modal-wrapper .quantity-controls strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: #e3d3a2;
+}
+
+.quickview-modal-wrapper .length-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quickview-modal-wrapper .length-buttons button {
+  background: #2c2a28;
+  border: 1px solid #bfa76f;
+  color: #e0dcb4;
+  padding: 0.4rem 0.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quickview-modal-wrapper .length-buttons button.active,
+.quickview-modal-wrapper .length-buttons button:hover {
+  background: #c8bd7b;
+  color: #151311;
+}
+
+.quickview-modal-wrapper .size-dropdown,
+.quickview-modal-wrapper .ml-dropdown {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #2c2a28;
+  border: 1px solid #bfa76f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Quantity controls */
+.quickview-modal-wrapper .quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quickview-modal-wrapper .quantity-controls button {
+  background: #c8bd7b;
+  color: #1e1b1a;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quickview-modal-wrapper .quantity-controls span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.quickview-modal-wrapper .modal-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quickview-modal-wrapper .modal-actions .btn-add,
+.quickview-modal-wrapper .modal-actions .btn-wishlist {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quickview-modal-wrapper .modal-actions .btn-add {
+  background-color: #bfa76f;
+  color: #151311;
+}
+
+.quickview-modal-wrapper .modal-actions .btn-add:hover {
+  background-color: #e6d7a7;
+}
+
+.quickview-modal-wrapper .modal-actions .btn-wishlist {
+  background-color: transparent;
+  border: 1px solid #bfa76f;
+  color: #bfa76f;
+}
+
+.quickview-modal-wrapper .modal-actions .btn-wishlist:hover {
+  background-color: #bfa76f;
+  color: #151311;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quickview-modal-wrapper .quickview-modal {
     flex-direction: column;
-    gap: 1rem;
-}
-
-.quickview-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.quickview-price {
-    font-size: 1.2rem;
-    color: #a67c00;
-}
-
-.quickview-modal-overlay .length-options,
-.quickview-modal-overlay .color-options,
-.quickview-modal-overlay .quantity-controls {
-    margin-top: 0.5rem;
-}
-
-.quickview-modal-overlay .length-buttons {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: 0.3rem;
-}
-
-.quickview-modal-overlay .length-buttons button {
-    padding: 0.2rem 0.2rem;
-    border: 0.5px solid #a67c00;
-    background-color: transparent;
-    color: #a67c00;
-
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.85rem;
-}
-
-.quickview-modal-overlay .length-buttons button.active {
-    background: #f5f5f5;
-    color: #a67c00;
-    border: 1px solid #a67c00;
-}
-
-.quickview-modal-overlay .quantity-controls {
-    display: flex;
     align-items: center;
-    gap: 0.5rem;
+  }
 
-}
+  .quickview-modal-wrapper .quickview-img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.quickview-modal-overlay .quantity-controls button {
-    width: 30px;
-    height: 30px;
-    font-size: 1.1rem;
-    background: #ddd;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.quickview-modal-overlay .quantity-controls span {
-    min-width: 25px;
-    text-align: center;
-}
-
-.quickview-modal-overlay .modal-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.quickview-modal-overlay .btn-add,
-.quickview-modal-overlay .btn-wishlist {
-    padding: 0.5rem 1.2rem;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.quickview-modal-overlay .btn-add {
-    background-color: transparent;
-    color: #a67c00;
-    border: 1px solid #a67c00;
-}
-
-.quickview-modal-overlay .btn-add:hover {
-    background-color: #000;
-}
-
-.quickview-modal-overlay .btn-wishlist {
-    background-color: transparent;
-    color: #a67c00;
-    border: 1px solid #a67c00;
-}
-
-.quickview-modal-overlay .btn-wishlist:hover {
-    background-color: #a67c00;
-    color: white;
+  .quickview-modal-wrapper .modal-actions {
+    flex-direction: column;
+  }
 }
